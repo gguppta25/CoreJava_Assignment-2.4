@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class TestDemo {
+	public static void main (String args[])
+	{
+		int marks, number;
+	      System.out.println("Enter the Number");
+	      Scanner in1 = new Scanner(System.in);	      
+	      number = in1.nextInt();
+	      ZeroManipulation gz = new ZeroManipulation();
+	      gz.outputzero(number);		
+	      System.out.println("Enter the marks");
+	      Scanner in = new Scanner(System.in);
+	      marks = in.nextInt();
+	      Grades gr = new Grades();
+	      gr.outputgrade(marks);
+
+	}
+
+}
+class ZeroManipulation
+{
+	public void outputzero(int number) 
+	{
+		if (number == 0)
+		{
+			System.out.println("You Have Entered Zero");
+		} 
+		else if (number > 0) 
+		{
+			System.out.println("You Have Entered Positive Value");
+		} else if (number < 0)
+		{
+			System.out.println("You Have Entered Negative Value");
+		}
+		
+	}
+	
+}
+class Grades
+{
+	public void outputgrade (int marks)
+	{
+		if (marks > 70)
+		{
+			System.out.println("Your Grade is A");
+		} 
+		else if (marks <= 70 && marks > 61) 
+		{
+			System.out.println("Your Grade is B");
+		} else if (marks <= 60 && marks > 0)
+		{
+			System.out.println("Your Grade is C");
+		}
+	}
+}
